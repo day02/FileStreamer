@@ -1,0 +1,17 @@
+{
+  "name": "file-stream-server",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspaces/FileStreamer",
+  "postCreateCommand": "cmake -S . -B build -G Ninja && cmake --build build -j"
+}
